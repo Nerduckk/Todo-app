@@ -1,0 +1,60 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Dependency directories (for both backend and frontend)
+backend/node_modules/
+frontend/node_modules/
+
+# Build and distribution directories
+backend/dist/
+frontend/dist/
+frontend/build/
+
+# Editor/IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+backend/coverage/
+frontend/coverage/
+
+
+*.dockerignore
+
+*.swp
+*.swo
+*.tmp
+temp/
+tmp/
+
+frontend/public/*.html 
+frontend/.cache/
+frontend/parcel-cache/
+
+backend/.knex/  
+
+
+yarn.lock
+pnpm-lock.yaml

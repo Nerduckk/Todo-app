@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  todo-mysql:
+    image: mysql:8.0
+    ports:
+      - 3008:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_USER: root
+      MYSQL_DATABASE: todos
+      MYSQL_USER: yukihara
+      MYSQL_PASSWORD: yukihara
+    volumes:
+      - todo-mysql-data:/var/lib/mysql
+    networks:
+      - todo-network
+
+volumes:
+  todo-mysql-data:
+
+networks:
+  todo-network:
+    driver: bridge
