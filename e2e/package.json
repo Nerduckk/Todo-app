@@ -1,0 +1,18 @@
+{
+  "name": "todo-app-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Playwright E2E and API test portfolio for the Todo app",
+  "scripts": {
+    "test": "node scripts/run-e2e.mjs",
+    "test:api": "playwright test tests/api",
+    "test:ui": "playwright test tests/ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "mysql-memory-server": "^1.18.0",
+    "mysql2": "^3.14.1"
+  }
+}

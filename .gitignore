@@ -58,3 +58,6 @@ backend/.knex/
 
 yarn.lock
 pnpm-lock.yaml
+
+# Keep the Playwright portfolio lockfile for reproducible installs
+!e2e/package-lock.json

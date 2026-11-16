@@ -80,6 +80,7 @@
                     color="red"
                     class="rounded-full"
                     size="small"
+                    :aria-label="todo.status === 'pending' ? 'Lưu trữ công việc' : 'Khôi phục công việc'"
                     @click="handleArchiveTodo(todo.id, todo.status)"
                   >
                     <ArchiveIcon />
@@ -95,6 +96,7 @@
                     color="green"
                     class="rounded-full"
                     size="small"
+                    :aria-label="todo.status === 'pending' && todo.is_deleted == 0 ? 'Hoàn thành công việc' : 'Khôi phục công việc'"
                     @click="handleCompleteTodo(todo.id, todo.status, todo.is_deleted)"
                   >
                     <CheckIcon />
@@ -109,6 +111,7 @@
                     variant="tonal"
                     color="green"
                     class="rounded-full"
+                    aria-label="Xem chi tiết công việc"
                     @click="handleViewTodo(todo.id)"
                     size="small"
                   >
@@ -129,6 +132,7 @@
                     color="blue"
                     class="rounded-full"
                     size="small"
+                    aria-label="Sửa công việc"
                     @click="handleEditTodo(todo.id)"
                   >
                     <PencilIcon />
@@ -144,6 +148,7 @@
                     color="red"
                     class="rounded-full"
                     size="small"
+                    :aria-label="todo.is_deleted == 1 ? 'Xóa vĩnh viễn' : 'Xóa công việc'"
                     @click="handleDeleteTodo(todo.id, todo.is_deleted)"
                   >
                     <TrashIcon />
